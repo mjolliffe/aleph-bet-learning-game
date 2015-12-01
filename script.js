@@ -35,27 +35,53 @@ var correctPairs = 0;
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
     document.getElementsByClassName("card")[i].innerHTML = words[i].word;
-    document.getElementsByClassName("card")[i].addEventListener("click", setSelected);
+    document.getElementsByClassName("card")[i].addEventListener("click", function() {
+      setSelected(this);
+    }.bind(words[i]));
   }
 }
 
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
     document.getElementsByClassName("card2")[i].innerHTML = '<img src='+ images[i].path +' width="100px">';
-    document.getElementsByClassName("card2")[i].addEventListener("click", setSelected);
+    document.getElementsByClassName("card2")[i].addEventListener("click", function() {
+      setSelected(this);
+    }.bind(images[i]));
   }
 }
+
 displayAllWords();
 displayAllImages();
 
-function setSelected (){
- for (var i = 0; i < words.length; i++) {
-  if (words[i].word == images[i].word) {
-    document.getElementsByClassName("card")[i].innerHTML.style.backgroundColor = "white";
-    document.getElementsByClassName("card2")[i].innerHTML.style.backgroundColor = "white";
-    correctPairs += 1;
+function setSelected(item){
+  if (item.path === undefined) {
+    for (var i = 0; i < words.length; i++) {
+      words[i].selected = false;
     }
-}
+  } else {
+    for (var i = 0; i < images.length; i++) {
+      images[i].selected = false;
+    }
+  }
+  // resetSelectedItems()
+  // does two things: (1) removes styling of old selected item (if there is one)
+  // (2) adds styling to represent new selected object.
+
+  item.selected = true;
+
+  event.target.className += ' selected';
+  // var img = item.word.path === 'undefined' ? '' : 'Img';
+  // document.getElementById(item.word + img).addClass('selected');
+  console.log(words, images);
+//  for (var i = 0; i < words.length; i++) {
+//   if (words[i].word == images[i].word) {
+//     console.log('match');
+//     document.getElementsByClassName("card")[i].innerHTML.style.backgroundColor = "white";
+//     document.getElementsByClassName("card2")[i].innerHTML.style.backgroundColor = "white";
+//     correctPairs += 1;
+//     }
+// }
+
 }
 
 function choseAvatar(){
