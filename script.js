@@ -1,8 +1,8 @@
 var words = ["shin", "bet", "tav", "aleph"];
-var images = [];
+var images = ["images/shin.png", "images/bet.png", "images/tav.png", "images/aleph.png"];
 var correctPairs = 0;
 
-// Image function used to create images and push to array
+/* Image function used to create images and push to array
 var createImage = function(src) {
   var img = new Image();
   img.src = src;
@@ -14,6 +14,7 @@ images.push(createImage("images/shin.png"));
 images.push(createImage("images/bet.png"));
 images.push(createImage("images/tav.png"));
 images.push(createImage("images/aleph.png"));
+*/
 
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
@@ -23,9 +24,10 @@ function displayAllWords() {
 
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
-    document.getElementsByClassName("card2")[i].innerHTML = images[i];
+    document.getElementsByClassName("card2")[i].innerHTML = '<img src='+images[i]+'>';
   }
 }
+
 
 for (var w = 0; w < words.length; w++) {
   if (words[w] === images[w]) {

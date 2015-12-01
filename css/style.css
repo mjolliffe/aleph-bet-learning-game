@@ -6,7 +6,7 @@ html {
 
 h1 {
   margin: auto;
-  font-size: 48px;
+  font-size: 52px;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -39,25 +39,26 @@ h2 {
   border: 2px solid #173599;
 }
 
+#selectPlayer {
+  font-size: 36px;
+  line-height: 72px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 #player li {
   font-size: 36px;
   list-style: none;
   line-height: 72px;
 }
 
-#boy {
-  width: 100px;
-  height: 150px;
+.kid {
   background: none;
   border: none;
+  padding: 10px;
+  margin: 12px;
 }
 
-#girl {
-  width: 100px;
-  height: 150px;
-  background: none;
-  border: none;
-}
 
 .stats {
   background-color: #B2CCF2;
@@ -92,7 +93,7 @@ h2 {
   float: left;
   border: 2px solid #173599;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 
@@ -103,6 +104,6 @@ h2 {
   float: left;
   border: 2px solid #173599;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
 }
 
