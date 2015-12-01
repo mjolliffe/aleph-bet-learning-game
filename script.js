@@ -31,47 +31,70 @@ var images = [
 }];
 
 var correctPairs = 0;
+var player1 = 1;
+
 
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
     document.getElementsByClassName("card")[i].innerHTML = words[i].word;
-    document.getElementsByClassName("card")[i].addEventListener("click", function() {
-      setSelected(this);
-    }.bind(words[i]));
   }
+  $('.card').click(function(event) {
+    setSelected(event.currentTarget);
+  });
 }
 
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
     document.getElementsByClassName("card2")[i].innerHTML = '<img src='+ images[i].path +' width="100px">';
-    document.getElementsByClassName("card2")[i].addEventListener("click", function() {
-      setSelected(this);
-    }.bind(images[i]));
   }
+  $('.card2').click(function(event) {
+    setSelected(event.currentTarget);
+  });
 }
 
 displayAllWords();
 displayAllImages();
 
 function setSelected(item){
-  if (item.path === undefined) {
+  if ($(item).hasClass('card')) {
     for (var i = 0; i < words.length; i++) {
       words[i].selected = false;
     }
-  } else {
+    $('.card').removeClass('selected1');
+  } else if ($(item).hasClass('card2')) {
     for (var i = 0; i < images.length; i++) {
       images[i].selected = false;
     }
+    $('.card2').removeClass('selected1');
   }
+
+  if (item.selected = true) {
+    //var img = item.word.path === 'undefined' ? '' : 'Img';
+    //document.getElementById(item.word + img).addClass('selected1');
+    $(item).addClass('selected1');
+    item.selected = true;
+    player1 = 1;
+  }
+}
+
+// words = ["shin", "bet", "tav", "aleph"]
+// images = ['image1', 'image2', 'image3', 'image4']
+// for (i in words) {
+//     for (j in images) {
+//         if (words[i].word == images[j].word && words[i].selected && images[j].selected)
+//             // do something
+//     }
+// }
+  // if (item.word.selected === item.images.selected) {
+  //   event.target.className += ' selected2';
+  //   player1 = 0;
+  // }
+
   // resetSelectedItems()
   // does two things: (1) removes styling of old selected item (if there is one)
   // (2) adds styling to represent new selected object.
 
-  item.selected = true;
 
-  event.target.className += ' selected';
-  // var img = item.word.path === 'undefined' ? '' : 'Img';
-  // document.getElementById(item.word + img).addClass('selected');
   console.log(words, images);
 //  for (var i = 0; i < words.length; i++) {
 //   if (words[i].word == images[i].word) {
@@ -82,7 +105,12 @@ function setSelected(item){
 //     }
 // }
 
-}
+ // function clearAll(){
+ //    var elements = document.getElementsByTagName("button").options;
+ //    for(var i = 0; i < elements.length; i++){
+ //      elements[i].selected = false;
+ //    }
+ //  }
 
 function choseAvatar(){
   document.getElementsByClassName("kid").addEventListener("click", setSelectedAvatar);
