@@ -11,6 +11,13 @@ h1 {
   padding-bottom: 30px;
 }
 
+h2 {
+  margin: auto;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 #reset {
   margin: auto;
   font-size: 18px;
@@ -79,11 +86,23 @@ h1 {
 }
 
 .card {
-  background-color: #B2CCF2;
-  width: 150px;
-  height: 150px;
+  background-color: #118F85;
+  width: 200px;
+  height: 200px;
   float: left;
   border: 2px solid #173599;
+  color: white;
+  font-size: 24px;
 }
 
+
+.card2 {
+  background-color: #118F85;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border: 2px solid #173599;
+  color: white;
+  font-size: 24px;
+}
 

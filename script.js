@@ -2,7 +2,7 @@ var words = ["shin", "bet", "tav", "aleph"];
 var images = [];
 var correctPairs = 0;
 
-// Image factory used to create images and push to array
+// Image function used to create images and push to array
 var createImage = function(src) {
   var img = new Image();
   img.src = src;
@@ -15,15 +15,31 @@ images.push(createImage("images/bet.png"));
 images.push(createImage("images/tav.png"));
 images.push(createImage("images/aleph.png"));
 
+function displayAllWords() {
+  for (var i=0;i<words.length;i++) {
+     document.getElementsByClassName("card")[i].innerHTML = words[i];
+  }
+}
+
+function displayAllImages() {
+  for (var i=0;i<images.length;i++) {
+    document.getElementsByClassName("card2")[i].innerHTML = images[i];
+  }
+}
+
+for (var w = 0; w < words.length; w++) {
+  if (words[w] === images[w]) {
+     correctPairs += 1;
+     words.style.background = "red";
+     images.style.background = "red";
+  }
+
+}
+
+displayAllWords();
+displayAllImages();
 /*
-mouseClicked = function() {
-    for (var i = 0; i < tiles.length; i++) {
-
-        }
-    }
-};
-
-Compare words to images
+//Compare words to images
 function compare(){
   if (words.indexOf('shin') === images.indexOf('images/shin.png')){
     correctPairs += 1;
@@ -31,31 +47,10 @@ function compare(){
     correctPairs += 1;
   }
 
-}*/
-
-for (var i=0;i<words.length;i++) {
-document.getElementsByClassName("card").innerHTML = words[i];
 }
 
-for (var i=0;i<images.length;i++) {
-document.getElementsByClassName("card").innerHTML = images[i];
-}
-
-/*
-//Loop through words and images to compare
-for (var i = 0; i < words.length; i++) {
-    for (var j = 0; j < images.length; j++) {
-        if (words[i] === images[j]) {
-         correctPairs += 1;
-         words.style.background = "red";
-         images.style.background = "yellow";
-        }
-    }
-}
-
-
-//Show images on reset
-function showImage () {
+//Higlight images when clicked
+function highlightImage () {
 
 }
 
