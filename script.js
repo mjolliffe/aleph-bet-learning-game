@@ -165,6 +165,6 @@ console.log(words, images);
 //   document.getElementsByClassName("kid").style.backgroundColor = "#173599";
 // }
 
-//Shuffle Board
+//Shuffle Board - set an attribute when i append
 
 //Get Winner when Board is Completed. Mazel Tov message.
