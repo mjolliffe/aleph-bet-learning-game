@@ -315,20 +315,13 @@ function setSelected(item){
 }
 console.log(words, images);
 
-// function clickBtn(btn) {
-//   if (player1 === 1) {
-//   document.getElementsByTagName("input").style.background = "red";
-//   player1 -= 1;
-//   winner();
-//   }
-//   else if (player1 !== 1) {
-//   document.getElementsByTagName("input").value = "O";
-//   player1 += 1;
-//   winner();
-//   }
-// }
-
-
+function getWinner (){
+  if (player1Points > player2Points && words[i].selected == true && images[j].selected == true) {
+    alert("Mazel Tov Player 1! You won!")
+  } else if (player2Points > player1Points && words[i].selected == true && images[j].selected == true) {
+    alert("Mazel Tov Player 2! You won!")
+  }
+}
 //Resets the Board.
 // function reset(){
 //    var elements = document.getElementsByTagName("button").options;
