@@ -111,16 +111,26 @@ function setSelected(item){
       }
     }
     $('.card2').removeClass('selected1');
-    }
+  }
 
-    $(item).addClass('selected1');
+  $(item).addClass('selected1');
 //Matching Logic:
     for (var i in words) {
       for (var j in images) {
           if (words[i].word == images[j].word && words[i].selected == true && images[j].selected == true) {
               alert("match!");
-              //$('.card').click(function(event) {setMatched(event.currentTarget);});
-              //$('.card2').click(function(event) {setMatched(event.currentTarget);});
+              var array = [];
+              array.push(words[i]);
+              array.push(images[j]);
+              console.log(array);
+//Use the array to match with the buttons that the items in the array are held in; if word that is in array is equal to the class on both buttons then change color and disable click (off.())
+
+              // if ($(item).hasClass('card')) {
+              //   $(item).addClass('selected2');
+              // } else if ($(item).hasClass('card2')) {
+              //   $(item).addClass('selected2');
+              // }
+              // setMatched();
               correctPairs += 1;
               player1 = 1;
           } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
@@ -132,49 +142,29 @@ function setSelected(item){
     }
 }
 
+//Set matched cards to a solid color and disable them from being clicked again.
 function setMatched(pair){
-
+    $('.card').addClass('selected2');
+    $('.card2').addClass('selected2');
 }
 
-  // if ($(item).hasClass('card').selected && $(item).hasClass('card2').selected && words[i].word == images[j].word) {
-  //   correctPairs ++;
-  //   $(item).addClass('selected2');
-  // }
-//   for (i in words) {
-//     for (j in images) {
-//         if ($(item).hasClass('card') === 'selected1' && $(item).hasClass('card2') === 'selected1' && words[i].selected && images[j].selected)
-//            correctPairs ++;
-//           alert("match!");
-//     }
-// }
 console.log(correctPairs);
 console.log(words, images);
 
-// if (item.word.selected === item.images.selected) {
-//   event.target.className += ' selected2';
-//   player1 = 0;
-// }
+//Resets the Board.
+// function reset(){
+//    var elements = document.getElementsByTagName("button").options;
+//    for(var i = 0; i < elements.length; i++){
+//      elements[i].selected = false;
+//    }
+//  }
 
-// resetSelectedItems()
-// does two things: (1) removes styling of old selected item (if there is one)
-// (2) adds styling to represent new selected object.
-
- // function clearAll(){
- //    var elements = document.getElementsByTagName("button").options;
- //    for(var i = 0; i < elements.length; i++){
- //      elements[i].selected = false;
- //    }
- //  }
-
-// function choseAvatar(){
+//Choose Avatar
+//function choseAvatar(){
 //   document.getElementsByClassName("kid").addEventListener("click", setSelectedAvatar);
-// }
-
-// function setSelectedAvatar (){
 //   document.getElementsByClassName("kid").style.backgroundColor = "#173599";
 // }
 
-// function reset (){
-//   displayAllWords();
-//   displayAllImages();
-// }
+//Shuffle Board
+
+//Get Winner when Board is Completed. Mazel Tov message.
