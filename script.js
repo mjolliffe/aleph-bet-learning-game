@@ -315,13 +315,46 @@ function setSelected(item){
 }
 console.log(words, images);
 
-function getWinner (){
-  if (player1Points > player2Points && words[i].selected == true && images[j].selected == true) {
+function endOfGame() {
+  alert("Game is Over!!");
+    if (player1Points > player2Points) {
     alert("Mazel Tov Player 1! You won!")
-  } else if (player2Points > player1Points && words[i].selected == true && images[j].selected == true) {
+  } else if (player2Points > player1Points) {
     alert("Mazel Tov Player 2! You won!")
   }
 }
+
+// function getTimeRemaining(endtime){
+//   var t = Date.parse(endtime) - Date.parse(new Date());
+//   var seconds = Math.floor( (t/1000) % 60 );
+//   var minutes = Math.floor( (t/1000/60) % 60 );
+//   return {
+//     'total': t,
+//     'minutes': minutes,
+//     'seconds': seconds
+//   };
+// }
+
+// function initializeClock(id, endtime){
+//   var clock = document.getElementById(id);
+//   var minutesSpan = clock.querySelector('.minutes');
+//   var secondsSpan = clock.querySelector('.seconds');
+
+// function updateClock(){
+//   var t = getTimeRemaining(endtime);
+//   minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+//   secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+//   if(t.total<=0){
+//     clearInterval(timeinterval);
+//   }
+// }
+// updateClock();
+// var timeinterval = setInterval(updateClock,1000);
+// }
+
+// var deadline = 'December 31 2015 00:00:50 UTC+0200';
+// initializeClock('clockdiv', deadline);
+
 //Resets the Board.
 // function reset(){
 //    var elements = document.getElementsByTagName("button").options;
