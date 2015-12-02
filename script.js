@@ -56,35 +56,60 @@ displayAllWords();
 displayAllImages();
 
 function setSelected(item){
+  console.log(item)
   if ($(item).hasClass('card')) {
+    var word = item.innerHTML
     for (var i = 0; i < words.length; i++) {
       words[i].selected = false;
+      for (i in words) {
+        if (word == words[i].word) {
+          words[i].selected = true
     }
+  }
     $('.card').removeClass('selected1');
+  }
   } else if ($(item).hasClass('card2')) {
-    for (var i = 0; i < images.length; i++) {
-      images[i].selected = false;
+    var source = item.getElementsByTagName('img')[0].src;
+    var split = source.split('/')
+    var word = split[split.length-1].split('.')[0]
+      for (var i = 0; i < images.length; i++) {
+        images[i].selected = false;
+        for (i in images) {
+          if (word == images[i].word) {
+            images[i].selected = true
+  }
+  }
     }
     $('.card2').removeClass('selected1');
   }
-
-  if (item.selected = true) {
+  // if (item.selected = true) {
     //var img = item.word.path === 'undefined' ? '' : 'Img';
     //document.getElementById(item.word + img).addClass('selected1');
     $(item).addClass('selected1');
     item.selected = true;
     player1 = 1;
-  }
+  // }
 }
 
-// words = ["shin", "bet", "tav", "aleph"]
-// images = ['image1', 'image2', 'image3', 'image4']
 // for (i in words) {
 //     for (j in images) {
-//         if (words[i].word == images[j].word && words[i].selected && images[j].selected)
-//             // do something
+//         if (words[i].selected && images[j].selected && words[i].word == images[j].word)
+//            correctPairs ++;
 //     }
 // }
+
+//   for (i in words) {
+//     for (j in images) {
+//         if ($(item).hasClass('card') === 'selected1' && $(item).hasClass('card2') === 'selected1' && words[i].selected && images[j].selected)
+//            correctPairs ++;
+//           alert("match!");
+//     }
+// }
+
+// if (words.selected && images.selected && words.word == "shin" && images.word == "shin") {
+// }
+console.log(correctPairs);
+
   // if (item.word.selected === item.images.selected) {
   //   event.target.className += ' selected2';
   //   player1 = 0;
