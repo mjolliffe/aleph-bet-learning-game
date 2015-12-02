@@ -53,7 +53,7 @@ var words = [
 { word: "fay",
   selected: false,
 },
-{ word: "fay",
+{ word: "faysofeet",
   selected: false,
 },
 { word: "memsofeet",
@@ -169,7 +169,7 @@ var images = [
   selected: false,
   path: "images/fay.png"
 },
-{ word: "fay",
+{ word: "faysofeet",
   selected: false,
   path: "images/faysofeet.png"
 },
@@ -225,10 +225,9 @@ var images = [
   selected: false,
   path: "images/vav.png"
 }];
-var scorePlayer1 = 0;
-var scorePlayer2 = 0;
-var correctPairs = 0;
-var player = 1;
+var player1Points = 0; //blue player
+var player2Points = 0; //green player
+var player = 0;
 
 //Displays all words on the browser.
 function displayAllWords() {
@@ -243,7 +242,7 @@ function displayAllWords() {
 //Displays all Hebrew images on the browser.
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
-    document.getElementsByClassName("card2")[i].innerHTML = '<img src='+ images[i].path +' width="100px">';
+    document.getElementsByClassName("card2")[i].innerHTML = '<img src='+ images[i].path +' width="80px">';
   }
   $('.card2').click(function(event) {
     setSelected(event.currentTarget);
@@ -293,19 +292,42 @@ function setSelected(item){
               array.push(images[j]);
               console.log(array);
               for (var i =0; i<array.length; i++) {
-                var matched = document.getElementsByClassName("selected1");
-                $(matched).addClass('selected2');
+                var matched = document.getElementsByClassName("selected1")
+                if (player === 0) {
+                    player1Points += 5;
+                    $(matched).addClass('player1');
+                } else if (player !== 0) {
+                    player2Points += 5;
+                    $(matched).addClass('player2');
+                    }
+              document.getElementById('playerOne').innerHTML = "Player 1: " + player1Points + " ";
+              document.getElementById('playerTwo').innerHTML = "Player 2: " + player2Points + " ";
               }
-              correctPairs += 1;
-              player = 1;
           } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
-            player = 0;
-            }
-          }
+              if (player === 0) {
+                player = 1;
+              } else if (player !== 0) {
+                player = 0;
+                }
+              }
+      }
     }
 }
-console.log(correctPairs);
 console.log(words, images);
+
+// function clickBtn(btn) {
+//   if (player1 === 1) {
+//   document.getElementsByTagName("input").style.background = "red";
+//   player1 -= 1;
+//   winner();
+//   }
+//   else if (player1 !== 1) {
+//   document.getElementsByTagName("input").value = "O";
+//   player1 += 1;
+//   winner();
+//   }
+// }
+
 
 //Resets the Board.
 // function reset(){

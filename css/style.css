@@ -8,7 +8,7 @@ h1 {
   margin: auto;
   font-size: 52px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 14px;
 }
 
 h2 {
@@ -16,6 +16,16 @@ h2 {
   font-size: 24px;
   text-align: center;
   padding-bottom: 30px;
+}
+
+#rules {
+  background-color: #173599;
+  width: 1000px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 24px;
 }
 
 #reset {
@@ -29,17 +39,22 @@ h2 {
   border: none;
 }
 
-#player {
-  background-color: #B2CCF2;
-  width: 180px;
-  height: 1000px;
-  float: left;
-  color: #173599;
-  margin: auto;
-  border: 2px solid #173599;
+#score {
+  text-align: right;
+  padding-left: 1200px;
 }
 
-#selectPlayer {
+#playerOne {
+  text-align: right;
+  padding-left: 1200px;
+}
+
+#playerTwo {
+  text-align: right;
+  padding-left: 1200px;
+}
+
+/*#selectPlayer {
   font-size: 24px;
   line-height: 48px;
   text-align: center;
@@ -57,6 +72,7 @@ h2 {
   border: none;
   padding: 10px;
   margin: 12px;
+  width: 100px;
 }
 
 
@@ -68,50 +84,41 @@ h2 {
   border: none;
   color: #17359;
   text-align: center;
-}
-
-#space {
-  background-color: #173599;
-  width: 30px;
-  height: 1200px;
-  float: left;
-  color: #173599;
-  margin: auto;
-}
+}*/
 
 #table{
   background-color: #173599;
-  width: 1200px;
-  height: 1200px;
-  float: left;
+  width: 1400px;
+  height: 1400px;
   margin: auto;
 }
 
 .card {
   background-color: #118F85;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   float: left;
   border: 2px solid #173599;
   color: white;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .card2 {
   background-color: #118F85;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   float: left;
   border: 2px solid #173599;
-  color: white;
-  font-size: 26px;
 }
 
 .selected1 {
   background-color: orange;
 }
 
-.selected2 {
+.player1 {
   background-color: blue;
 }
 
+.player2 {
+  background-color: green;
+}
