@@ -280,7 +280,6 @@ function setSelected(item){
     }
     $('.card2').removeClass('selected1');
   }
-
   $(item).addClass('selected1');
 //Matching Logic:
     for (var i in words) {
@@ -291,31 +290,20 @@ function setSelected(item){
               array.push(words[i]);
               array.push(images[j]);
               console.log(array);
-//Use the array to match with the buttons that the items in the array are held in; if word that is in array is equal to the class on both buttons then change color and disable click (off.())
-
-              // if ($(item).hasClass('card')) {
-              //   $(item).addClass('selected2');
-              // } else if ($(item).hasClass('card2')) {
-              //   $(item).addClass('selected2');
-              // }
-              // setMatched();
+              for (var i =0; i<array.length; i++) {
+                var matched = document.getElementsByClassName("selected1");
+                $(matched).addClass('selected2');
+                //$('.card').off('click'); Need to fix so that buttons are disabled once match is made
+                //$('.card2').off('click');
+              }
               correctPairs += 1;
               player1 = 1;
           } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
-            alert("wrong.");
             player1 = 0;
             }
-
           }
     }
 }
-
-//Set matched cards to a solid color and disable them from being clicked again.
-function setMatched(pair){
-    $('.card').addClass('selected2');
-    $('.card2').addClass('selected2');
-}
-
 console.log(correctPairs);
 console.log(words, images);
 
