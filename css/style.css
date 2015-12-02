@@ -31,8 +31,8 @@ h2 {
 
 #player {
   background-color: #B2CCF2;
-  width: 400px;
-  height: 600px;
+  width: 180px;
+  height: 1000px;
   float: left;
   color: #173599;
   margin: auto;
@@ -40,16 +40,16 @@ h2 {
 }
 
 #selectPlayer {
-  font-size: 36px;
-  line-height: 72px;
+  font-size: 24px;
+  line-height: 48px;
   text-align: center;
   padding-top: 10px;
 }
 
 #player li {
-  font-size: 36px;
+  font-size: 24px;
   list-style: none;
-  line-height: 72px;
+  line-height: 48px;
 }
 
 .kid {
@@ -62,17 +62,18 @@ h2 {
 
 .stats {
   background-color: #B2CCF2;
-  width: 200px;
-  font-size: 36px;
+  width: 120px;
+  font-size: 24px;
   height: 72px;
   border: none;
   color: #17359;
+  text-align: center;
 }
 
 #space {
   background-color: #173599;
-  width: 100px;
-  height: 600px;
+  width: 30px;
+  height: 1200px;
   float: left;
   color: #173599;
   margin: auto;
@@ -80,31 +81,30 @@ h2 {
 
 #table{
   background-color: #173599;
-  width: 800px;
-  height: 800px;
+  width: 1200px;
+  height: 1200px;
   float: left;
   margin: auto;
 }
 
 .card {
   background-color: #118F85;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   float: left;
   border: 2px solid #173599;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
 }
-
 
 .card2 {
   background-color: #118F85;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   float: left;
   border: 2px solid #173599;
   color: white;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .selected1 {
