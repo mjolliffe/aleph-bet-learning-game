@@ -112,21 +112,29 @@ function setSelected(item){
     }
     $('.card2').removeClass('selected1');
     }
-  // if (item.selected = true) {
-    //var img = item.word.path === 'undefined' ? '' : 'Img';
-    //document.getElementById(item.word + img).addClass('selected1');
-    $(item).addClass('selected1');
-    player1 = 1;
 
+    $(item).addClass('selected1');
+//Matching Logic:
     for (var i in words) {
-    for (var j in images) {
-        if (words[i].word == images[j].word && words[i].selected == true && images[j].selected == true)
-        alert("match!");
+      for (var j in images) {
+          if (words[i].word == images[j].word && words[i].selected == true && images[j].selected == true) {
+              alert("match!");
+              //$('.card').click(function(event) {setMatched(event.currentTarget);});
+              //$('.card2').click(function(event) {setMatched(event.currentTarget);});
+              correctPairs += 1;
+              player1 = 1;
+          } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
+            alert("wrong.");
+            player1 = 0;
+            }
+
+          }
     }
 }
+
+function setMatched(pair){
+
 }
-
-
 
   // if ($(item).hasClass('card').selected && $(item).hasClass('card2').selected && words[i].word == images[j].word) {
   //   correctPairs ++;
