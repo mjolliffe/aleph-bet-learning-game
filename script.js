@@ -225,8 +225,10 @@ var images = [
   selected: false,
   path: "images/vav.png"
 }];
+var scorePlayer1 = 0;
+var scorePlayer2 = 0;
 var correctPairs = 0;
-var player1 = 1;
+var player = 1;
 
 //Displays all words on the browser.
 function displayAllWords() {
@@ -285,7 +287,7 @@ function setSelected(item){
     for (var i in words) {
       for (var j in images) {
           if (words[i].word == images[j].word && words[i].selected == true && images[j].selected == true) {
-              alert("match!");
+//Creating an array out of the selected pairs that match in order to add another class to them that changes their color. Would like to also be able to disable the matched pairs from being clicked again maybe using something like $('.card2').off('click');
               var array = [];
               array.push(words[i]);
               array.push(images[j]);
@@ -293,13 +295,11 @@ function setSelected(item){
               for (var i =0; i<array.length; i++) {
                 var matched = document.getElementsByClassName("selected1");
                 $(matched).addClass('selected2');
-                //$('.card').off('click'); Need to fix so that buttons are disabled once match is made
-                //$('.card2').off('click');
               }
               correctPairs += 1;
-              player1 = 1;
+              player = 1;
           } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
-            player1 = 0;
+            player = 0;
             }
           }
     }
@@ -324,3 +324,6 @@ console.log(words, images);
 //Shuffle Board - set an attribute when i append
 
 //Get Winner when Board is Completed. Mazel Tov message.
+//function getWinner() {
+//  alert("Mazel Tov Player" + winner +" ! You won!");
+//}
