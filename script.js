@@ -174,22 +174,21 @@ function setSelected(item){
 console.log(words, images);
 
 $(function() {
-      $('#modal').easyModal();
+      $('.modal').easyModal();
     });
 
-///Timer and Winner function --- need to remove ALERTS and change to dialogs
+///Timer and Winner function
 function endOfGame() {
-  var modal = $('#modal');
-  var message = $('#message');
+  var modal = $('.modal');
+  var message = $('.message');
     if (player1Points > player2Points) {
-  message.html("Mazel Tov Player 1! You won!");
-    $("<div title='Basic dialog'>Mazel Tov Player 1! You won!</div>").dialog();
+    message.html("Mazel Tov Player 1! You won!");
   } else if (player2Points > player1Points) {
-  message.html("Mazel Tov Player 2! You won!");
+    message.html("Mazel Tov Player 2! You won!");
   } else if (player2Points == player1Points) {
-  message.html("It's a tie! Play Again.");
+    message.html("It's a tie! Play Again.");
   }
-  $('#modal').trigger('openModal');
+  $('.modal').trigger('openModal');
 }
 
 //Shuffle Board

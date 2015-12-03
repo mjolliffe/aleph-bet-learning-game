@@ -28,8 +28,8 @@
   </table>
   <table class="centerItems" id="ruleTable2">
     <tr>
-      <td><button id = "timer" onclick = "setTimeout(endOfGame, 100);">Start</button></td>
-      <td><button id = "reset" onlick = "resetBoard()">Reset</button></td>
+      <td><button class= "setting" id = "timer" onclick = "setTimeout(endOfGame, 100);">Start</button></td>
+      <td><button class= "setting" id = "reset" onlick = "resetBoard()">Reset</button></td>
       <td><button id = "timerDisplay">2:00</button></td>
       <td id = "sofeet">** = sofeet</td>
       <td id = "circle1"></td>
@@ -38,8 +38,8 @@
       <td class = "stats" id = "playerTwo">Player 2: 0</td>
     </tr>
   </table>
-  <div id="modal" style="display: block; position: fixed; z-index: 2; left: 50%; top: 200px; margin-left: -300px; margin-top: 0px;">
-    <p id="message"></p>
+  <div class="modal">
+    <p class="message"></p>
   </div>
 <!--   <div id="clockdiv">
     <div>

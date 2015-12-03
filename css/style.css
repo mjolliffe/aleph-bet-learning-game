@@ -30,11 +30,11 @@ h2 {
   font-size: 24px;
 }*/
 
-#timer {
-  -moz-box-shadow:inset 0px 39px 0px -24px #e87b48;
-  -webkit-box-shadow:inset 0px 39px 0px -24px #e87b48;
-  box-shadow:inset 0px 39px 0px -24px #e87b48;
-  background-color:#e36420;
+.setting {
+  -moz-box-shadow:inset 0px 39px 0px -24px #FF9C0D;
+  -webkit-box-shadow:inset 0px 39px 0px -24px #FF9C0D;
+  box-shadow:inset 0px 39px 0px -24px #FF9C0D;
+  background-color:#FF9C0D;
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
@@ -45,52 +45,23 @@ h2 {
   font-family: Inconsolata;
   font-size:24px;
   text-decoration:none;
-  text-shadow:0px 1px 0px #e85815;
+  text-shadow:0px 1px 0px #FF9C0D;
   outline: none;
 /*  margin-left: 29px;
   margin-right: 5px;*/
   padding: 10px;
 }
 
-#timer:hover {
-  background-color:#e66119;
+.setting:hover {
+  background-color:#FF4D00;
+  box-shadow:inset 0px 39px 0px -24px #FF4D00;
 }
 
-#timer:active {
+.setting:active {
   position:relative;
   top:1px;
 }
 
-#reset {
-  -moz-box-shadow:inset 0px 39px 0px -24px #e87b48;
-  -webkit-box-shadow:inset 0px 39px 0px -24px #e87b48;
-  box-shadow:inset 0px 39px 0px -24px #e87b48;
-  background-color:#e36420;
-  -moz-border-radius:4px;
-  -webkit-border-radius:4px;
-  border-radius:4px;
-/*  border: none;*/
-  display:inline-block;
-  cursor:pointer;
-  color: white;
-  font-family: Inconsolata;
-  font-size:24px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #e85815;
-  outline: none;
-/*  margin-left: 5px;
-  margin-right: 5px;*/
-  padding: 10px;
-}
-
-#reset:hover {
-  background-color:#e66119;
-}
-
-#reset:active {
-  position:relative;
-  top:1px;
-}
 
 #timerDisplay{
   /*margin-right: 460px;*/
@@ -261,4 +232,22 @@ h2 {
 
 .player2 {
   background-color: #9B3AFF;
+}
+
+.modal {
+display: block;
+position: fixed;
+z-index: 2;
+left: 50%;
+top: 200px;
+margin-left: -300px;
+margin-top: 0px;
+background-color: #FF9C0D;
+padding: 50px;
+border-radius: 8px;
+}
+
+.message {
+font-family: Inconsolata;
+font-size: 24px;
 }
