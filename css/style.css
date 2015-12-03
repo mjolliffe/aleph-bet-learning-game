@@ -58,7 +58,7 @@ h2 {
 
 .centerItems {
   text-align: center;
-  margin: auto;
+  margin: 12px;
 }
 
 #ruleTable {
@@ -89,7 +89,7 @@ h2 {
 
 #sofeet {
   font-size: 24px;
-  padding-left: 380px;
+  padding-left: 400px;
   padding-right: 40px;
 }
 

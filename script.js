@@ -1,15 +1,3 @@
-//Constructor functions to create arrays of words and images(Hebrew characters).
-function Word(word, selected) {
-  this.word = word;
-  this.selected = false;
-}
-
-function Images(word, path, selected) {
-  this.word = word;
-  this.path = path;
-  this.selected = false;
-}
-
 var words = [
   new Word('shin'),
   new Word('bet'),
@@ -80,9 +68,22 @@ var images = [
   new Images('pay','images/pay.png')
 ]
 
-var player1Points = 0; //blue player
-var player2Points = 0; //green player
+var player1Points = 0; //pink player
+var player2Points = 0; //purple player
 var player = 0;
+
+
+//Constructor functions to create arrays of words and images(Hebrew characters).
+function Word(word, selected) {
+  this.word = word;
+  this.selected = false;
+}
+
+function Images(word, path, selected) {
+  this.word = word;
+  this.path = path;
+  this.selected = false;
+}
 
 //Displays all words on the browser.
 function displayAllWords() {
@@ -143,7 +144,7 @@ function setSelected(item){
     for (var i in words) {
       for (var j in images) {
           if (words[i].word == images[j].word && words[i].selected == true && images[j].selected == true) {
-//Creating an array out of the selected pairs that match in order to add another class to them that changes their color. Would like to also be able to disable the matched pairs from being clicked again maybe using something like $('.card2').off('click');
+//Created an array out of the selected pairs that match and added class to them that changes their color for the player who correctly matches them. Would like to also be able to disable the matched pairs from being clicked again maybe using something like $('.card2').off('click');
               var array = [];
               array.push(words[i]);
               array.push(images[j]);
@@ -171,11 +172,6 @@ function setSelected(item){
       }
     }
 }
-console.log(words, images);
-
-$(function() {
-      $('.modal').easyModal();
-    });
 
 //Shuffle Board
 function shuffle(sourceArray) {
@@ -186,7 +182,6 @@ function shuffle(sourceArray) {
         sourceArray[i] = temp;
     }
 }
-console.log(words)
 
 //Runs and Displays Timer, Also calls endOfGame function
 function startTimer(duration, display) {
@@ -194,12 +189,9 @@ function startTimer(duration, display) {
     var interval = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
         display.textContent = minutes + ":" + seconds;
-
         if (--timer < 0) {
             timer = duration;
             clearInterval(interval);
@@ -208,12 +200,17 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+//Sets time
 function timer() {
     var twoMinutes = 60 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
 };
 
+//Execute modal function
+$(function() {
+      $('.modal').easyModal();
+});
 
 ///Winner function
 function endOfGame() {
@@ -228,11 +225,13 @@ function endOfGame() {
   }
   $('.modal').trigger('openModal');
 }
+
 //Resets the Board.
-// function resetBoard(){
-//   shuffle(words);
-//   shuffle(images);
-//   displayAllWords();
-//   displayAllImages();
-// }
+function resetBoard(){
+  $('.card, .card2').remove();
+  shuffle(words);
+  shuffle(images);
+  displayAllWords();
+  displayAllImages();
+}
 
