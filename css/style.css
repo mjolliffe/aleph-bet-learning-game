@@ -39,7 +39,7 @@ h2 {
   border: none;
 }
 
-#clockdiv{
+/*#clockdiv{
   font-family: sans-serif;
   color: #fff;
   display: inline-block;
@@ -64,8 +64,8 @@ h2 {
 
 .smalltext{
   padding-top: 5px;
-  font-size: 16px;
-}
+  font-size: 16px;*/
+/*}*/
 
 #scoreBoard {
   text-align: right;

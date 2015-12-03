@@ -232,7 +232,7 @@ var player = 0;
 //Displays all words on the browser.
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
-    document.getElementsByClassName("card")[i].innerHTML = words[i].word;
+    document.getElementById("table2").innerHTML += "<button id='" + words[i].word + "' class='card'>" + words[i].word + "</button>"
   }
   $('.card').click(function(event) {
     setSelected(event.currentTarget);
@@ -242,7 +242,7 @@ function displayAllWords() {
 //Displays all Hebrew images on the browser.
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
-    document.getElementsByClassName("card2")[i].innerHTML = '<img src='+ images[i].path +' width="80px">';
+    document.getElementById("table1").innerHTML += "<button id='" + images[i].path + "' class='card2'>" + '<img src='+ images[i].path +' width="80px">'+ "</button>"
   }
   $('.card2').click(function(event) {
     setSelected(event.currentTarget);
@@ -315,6 +315,7 @@ function setSelected(item){
 }
 console.log(words, images);
 
+///Timer and Winner function
 function endOfGame() {
   alert("Game is Over!!");
     if (player1Points > player2Points) {
@@ -322,6 +323,22 @@ function endOfGame() {
   } else if (player2Points > player1Points) {
     alert("Mazel Tov Player 2! You won!")
   }
+}
+
+//Shuffle Board - set an attribute when i append
+function shuffle(array) {
+ var images = array.length, temporaryValue, randomIndex ;
+ // While there remain elements to shuffle...
+ while (0 !== images) {
+   // Pick a remaining element...
+   randomIndex = Math.floor(Math.random() * images);
+   images-= 1;
+   // And swap it with the current element.
+   temporaryValue = array[images];
+   array[images] = array[randomIndex];
+   array[randomIndex] = temporaryValue;
+ }
+   return array;
 }
 
 // function getTimeRemaining(endtime){
@@ -369,9 +386,3 @@ function endOfGame() {
 //   document.getElementsByClassName("kid").style.backgroundColor = "#173599";
 // }
 
-//Shuffle Board - set an attribute when i append
-
-//Get Winner when Board is Completed. Mazel Tov message.
-//function getWinner() {
-//  alert("Mazel Tov Player" + winner +" ! You won!");
-//}
