@@ -325,6 +325,8 @@ function endOfGame() {
     alert("Mazel Tov Player 1! You won!")
   } else if (player2Points > player1Points) {
     alert("Mazel Tov Player 2! You won!")
+  } else if (player2Points == player1Points) {
+    alert("It's a tie! Play Again.")
   }
 }
 
@@ -338,7 +340,6 @@ function shuffle(sourceArray) {
     }
 }
 console.log(words)
-
 
 // function getTimeRemaining(endtime){
 //   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -372,12 +373,10 @@ console.log(words)
 // initializeClock('clockdiv', deadline);
 
 //Resets the Board.
-// function reset(){
-//    var elements = document.getElementsByTagName("button").options;
-//    for(var i = 0; i < elements.length; i++){
-//      elements[i].selected = false;
-//    }
-//  }
+// function resetBoard(){
+//   return shuffle(words);
+//   return shuffle(images);
+// }
 
 //Choose Avatar
 //function choseAvatar(){

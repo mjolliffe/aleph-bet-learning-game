@@ -6,12 +6,14 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <button type="button" id="reset" onlick="clearAll()" >Reset</button>
-  <span id="scoreBoard">Score</span>
-  <span id="playerOne">Player 1</span>
-  <span id="playerTwo">Player 2</span>
+  <button type="button" id="reset" onlick="resetBoard()" >Reset</button>
   <h1>Learn the Aleph Bet!</h1>
-  <button id = "timer" onclick="setTimeout(endOfGame, 120000);">Start the Timer!</button>
+  <div>
+    <span id="scoreBoard">Score</span>
+    <div id="circle1"><span id="playerOne">Player 1: 0</span></div>
+    <div id="circle2"><span id="playerTwo">Player 2: 0</span></div>
+    <button id = "timer" onclick="setTimeout(endOfGame, 300);">Start the Timer!</button>
+  </div>
 <!--   <div id="clockdiv">
     <div>
       <span class="minutes"></span>

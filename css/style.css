@@ -67,7 +67,7 @@ h2 {
   font-size: 16px;*/
 /*}*/
 
-#timer {
+#time {
   margin: auto;
   border: none;
   background-color: #222;
@@ -78,18 +78,32 @@ h2 {
 }
 
 #scoreBoard {
-  text-align: right;
-  padding-left: 1200px;
+  text-align: left;
+  padding-left: 1000px;
+}
+
+#circle1 {
+  background-color: #E8366C;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+#circle2 {
+  background-color: #9B3AFF;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 #playerOne {
-  text-align: right;
-  padding-left: 1200px;
+  text-align: left;
+  padding-left: 600px;
 }
 
 #playerTwo {
-  text-align: right;
-  padding-left: 1200px;
+  text-align: left;
+  padding-left: 600px;
 }
 
 /*#selectPlayer {
@@ -131,7 +145,7 @@ h2 {
   margin: auto;
   float: left;
   padding: 0px 10px 0px 40px;
-
+  margin-bottom: 50px;
 }
 
 .card {
@@ -151,6 +165,7 @@ h2 {
   margin: auto;
   float: right;
   padding: 0px 40px 0px 10px;
+  margin-bottom: 50px;
 }
 
 .card2 {
@@ -162,13 +177,13 @@ h2 {
 }
 
 .selected1 {
-  background-color: orange;
+  background-color: #FF9C0D;
 }
 
 .player1 {
-  background-color: blue;
+  background-color: #E8366C;
 }
 
 .player2 {
-  background-color: green;
+  background-color: #9B3AFF;
 }
