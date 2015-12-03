@@ -248,9 +248,11 @@ function displayAllImages() {
     setSelected(event.currentTarget);
   });
 }
-
+shuffle(words);
+shuffle(images);
 displayAllWords();
 displayAllImages();
+
 
 //Selects letters and word shapes and sets selected items to true.
 function setSelected(item){
@@ -303,6 +305,7 @@ function setSelected(item){
               document.getElementById('playerOne').innerHTML = "Player 1: " + player1Points + " ";
               document.getElementById('playerTwo').innerHTML = "Player 2: " + player2Points + " ";
               }
+//Switch player logic included in Matching logic.
           } else if (words[i].word != images[j].word && words[i].selected == true && images[j].selected == true) {
               if (player === 0) {
                 player = 1;
@@ -315,7 +318,7 @@ function setSelected(item){
 }
 console.log(words, images);
 
-///Timer and Winner function
+///Timer and Winner function --- need to remove ALERTS and change to dialogs
 function endOfGame() {
   alert("Game is Over!!");
     if (player1Points > player2Points) {
@@ -325,21 +328,17 @@ function endOfGame() {
   }
 }
 
-//Shuffle Board - set an attribute when i append
-function shuffle(array) {
- var images = array.length, temporaryValue, randomIndex ;
- // While there remain elements to shuffle...
- while (0 !== images) {
-   // Pick a remaining element...
-   randomIndex = Math.floor(Math.random() * images);
-   images-= 1;
-   // And swap it with the current element.
-   temporaryValue = array[images];
-   array[images] = array[randomIndex];
-   array[randomIndex] = temporaryValue;
- }
-   return array;
+//Shuffle Board
+function shuffle(sourceArray) {
+    for (var i = 0; i < sourceArray.length - 1; i++) {
+        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+        var temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
 }
+console.log(words)
+
 
 // function getTimeRemaining(endtime){
 //   var t = Date.parse(endtime) - Date.parse(new Date());
