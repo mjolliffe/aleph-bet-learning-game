@@ -188,7 +188,7 @@ function shuffle(sourceArray) {
 }
 console.log(words)
 
-//Run and Display Timer
+//Runs and Displays Timer, Also calls endOfGame function
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     var interval = setInterval(function () {
@@ -209,34 +209,30 @@ function startTimer(duration, display) {
 }
 
 function timer() {
-    var twoMinutes = 5 * 1,
+    var twoMinutes = 60 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
 };
 
 
-///Winner function based on Timer
+///Winner function
 function endOfGame() {
   var modal = $('.modal');
   var message = $('.message');
     if (player1Points > player2Points) {
-    message.html("Mazel Tov Player 1! You won!");
+    message.html("Mazel Tov Player 1!<br>You won!");
   } else if (player2Points > player1Points) {
-    message.html("Mazel Tov Player 2! You won!");
+    message.html("Mazel Tov Player 2!<br>You won!");
   } else if (player2Points == player1Points) {
-    message.html("It's a tie! Play Again.");
+    message.html("It's a tie!<br>Play Again.");
   }
   $('.modal').trigger('openModal');
 }
 //Resets the Board.
 // function resetBoard(){
-//   return shuffle(words);
-//   return shuffle(images);
-// }
-
-//Choose Avatar
-//function choseAvatar(){
-//   document.getElementsByClassName("kid").addEventListener("click", setSelectedAvatar);
-//   document.getElementsByClassName("kid").style.backgroundColor = "#173599";
+//   shuffle(words);
+//   shuffle(images);
+//   displayAllWords();
+//   displayAllImages();
 // }
 
