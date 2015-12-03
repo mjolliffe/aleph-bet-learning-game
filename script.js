@@ -121,6 +121,27 @@ shuffle(images);
 displayAllWords();
 displayAllImages();
 
+//Displays the Start Button
+function displayStart() {
+  document.getElementById("timer").innerHTML = "Play"
+}
+displayStart();
+
+//Displays the Reset Button
+function displayReset() {
+  document.getElementById("reset").innerHTML = "Reset"
+}
+displayReset();
+
+//Resets the Board.
+function resetBoard(){
+  $('.card, .card2').remove();
+  shuffle(words);
+  shuffle(images);
+  displayAllWords();
+  displayAllImages();
+  displayStart();
+}
 
 //Selects letters and word shapes and sets selected items to true.
 function setSelected(item){
@@ -214,18 +235,10 @@ function startTimer(duration, display) {
 
 //Sets timer to two minutes
 function timer() {
-    var twoMinutes = 2 * 2,
+    var twoMinutes = 60 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
 };
-
-// function disableBtn() {
-//     document.getElementById("#timer").disabled = true;
-// }
-
-// function enableBtn() {
-//     document.getElementById("#timer").disabled = false;
-// }
 
 //Execute modal function
 $(function() {
@@ -247,14 +260,5 @@ function endOfGame() {
     $('.modal').addClass('tie');
   }
   $('.modal').trigger('openModal');
+  displayStart();
 }
-
-//Resets the Board.
-function resetBoard(){
-  $('.card, .card2').remove();
-  shuffle(words);
-  shuffle(images);
-  displayAllWords();
-  displayAllImages();
-}
-
