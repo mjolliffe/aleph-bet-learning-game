@@ -163,19 +163,32 @@ h2 {
 }
 
 .modal {
-display: block;
-position: fixed;
-z-index: 2;
-left: 50%;
-top: 200px;
-margin-left: -300px;
-margin-top: 0px;
-padding: 50px;
-border-radius: 8px;
-background-color: #FF4D00;
+  display: block;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 200px;
+  margin-left: -300px;
+  margin-top: 0px;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.modal.player1 {
+  background-color: #E8366C;
+}
+
+.modal.player2 {
+  background-color: #9B3AFF;
+}
+
+.modal.tie {
+  background-color: #FF4D00;
 }
 
 .message {
-font-family: Inconsolata;
-font-size: 36px;
+  font-family: Inconsolata;
+  font-size: 36px;
+  text-align: center;
+  line-height: 72px;
 }

@@ -85,6 +85,18 @@ function Images(word, path, selected) {
   this.selected = false;
 }
 
+//Disables Boards
+function disableBoards() {
+    document.getElementsByClassName('.card').disabled = true;
+    document.getElementsByClassName('.card2').disabled = true;
+}
+
+//Enables Boards when Start button clicked
+function enableBoards() {
+    document.getElementsByClassName('.card').disabled = false;
+    document.getElementsByClassName('.card2').disabled = false;
+}
+
 //Displays all words on the browser.
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
@@ -200,12 +212,20 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-//Sets time
+//Sets timer to two minutes
 function timer() {
-    var twoMinutes = 60 * 2,
+    var twoMinutes = 2 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
 };
+
+// function disableBtn() {
+//     document.getElementById("#timer").disabled = true;
+// }
+
+// function enableBtn() {
+//     document.getElementById("#timer").disabled = false;
+// }
 
 //Execute modal function
 $(function() {
@@ -218,10 +238,13 @@ function endOfGame() {
   var message = $('.message');
     if (player1Points > player2Points) {
     message.html("Mazel Tov Player 1!<br>You won!");
+    $('.modal').addClass('player1');
   } else if (player2Points > player1Points) {
     message.html("Mazel Tov Player 2!<br>You won!");
+    $('.modal').addClass('player2');
   } else if (player2Points == player1Points) {
     message.html("It's a tie!<br>Play Again.");
+    $('.modal').addClass('tie');
   }
   $('.modal').trigger('openModal');
 }

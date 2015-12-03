@@ -7,7 +7,7 @@
   <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload = "disableBoards()">
   <h1>Learn the Aleph Bet!</h1>
   <h2>Match the characters with their names before time runs out!</h2>
   <table class="centerItems" id="ruleTable">
@@ -26,7 +26,7 @@
   </table>
   <table class="centerItems" id="ruleTable2">
     <tr>
-      <td><button class= "setting" id = "timer" onclick = "timer()">Start</button></td>
+      <td><button class= "setting" id = "timer" onclick = "timer(); enableBoards()">Start</button></td>
       <td><button class= "setting" id = "reset" onclick = "resetBoard()">Reset</button></td>
       <td id = "sofeet">** = sofeet</td>
       <td id = "circle1"></td>
