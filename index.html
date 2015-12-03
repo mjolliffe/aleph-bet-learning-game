@@ -20,14 +20,15 @@
     <tr class="row2">
       <td class = "rules">Click on a Hebrew character.</td>
       <td class = "rules">Match the character in the left box with its name in the right box.</td>
-      <td class = "rules">Score 10 points when you make a match.<br>If you miss a match, your opponent can steal that those points.</td>
-      <td class = "rules">Earn enough points to beat your opponent!</td>
+      <td class = "rules">Score 10 points when you make a match.<br>If you miss a match, your opponent must make the correct match or lose his turn.</td>
+      <td class = "rules">Earn enough points to beat your opponent and win the game!</td>
     </tr>
   </table>
   <table id="ruleTable2">
     <tr>
       <td><button id = "timer" onclick = "setTimeout(endOfGame, 120000);">Start</button></td>
       <td><button id = "reset" onlick = "resetBoard()">Reset</button></td>
+      <td><button id = "timerDisplay">2:00</button></td>
       <td id = "circle1"></td>
       <td class = "stats" id = "playerOne">Player 1: 0</td>
       <td id = "circle2"></td>

@@ -29,7 +29,7 @@ var words = [
 { word: "chaph",
   selected: false,
 },
-{ word: "chaphsofeet",
+{ word: "chaph**",
   selected: false,
 },
 { word: "chet",
@@ -53,10 +53,10 @@ var words = [
 { word: "fay",
   selected: false,
 },
-{ word: "faysofeet",
+{ word: "fay**",
   selected: false,
 },
-{ word: "memsofeet",
+{ word: "mem**",
   selected: false,
 },
 { word: "nun",
@@ -65,7 +65,7 @@ var words = [
 { word: "samech",
   selected: false,
 },
-{ word: "tsadesofeet",
+{ word: "tsade**",
   selected: false,
 },
 { word: "vav",
@@ -80,7 +80,7 @@ var words = [
 { word: "hey",
   selected: false,
 },
-{ word: "nunsofeet",
+{ word: "nun**",
   selected: false,
 },
 { word: "kuf",
@@ -134,9 +134,9 @@ var images = [
   selected: false,
   path: "images/chaph.png"
 },
-{ word: "chaphsofeet",
+{ word: "chaph**",
   selected: false,
-  path: "images/chaphsofeet.png"
+  path: "images/chaph**.png"
 },
 { word: "chet",
   selected: false,
@@ -166,13 +166,13 @@ var images = [
   selected: false,
   path: "images/fay.png"
 },
-{ word: "faysofeet",
+{ word: "fay**",
   selected: false,
-  path: "images/faysofeet.png"
+  path: "images/fay**.png"
 },
-{ word: "memsofeet",
+{ word: "mem**",
   selected: false,
-  path: "images/memsofeet.png"
+  path: "images/mem**.png"
 },
 { word: "nun",
   selected: false,
@@ -182,9 +182,9 @@ var images = [
   selected: false,
   path: "images/samech.png"
 },
-{ word: "tsadesofeet",
+{ word: "tsade**",
   selected: false,
-  path: "images/tsadesofeet.png"
+  path: "images/tsade**.png"
 },
 { word: "vav",
   selected: false,
@@ -202,9 +202,9 @@ var images = [
   selected: false,
   path: "images/hey.png"
 },
-{ word: "nunsofeet",
+{ word: "nun**",
   selected: false,
-  path: "images/nunsofeet.png"
+  path: "images/nun**.png"
 },
 { word: "kuf",
   selected: false,
