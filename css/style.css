@@ -38,8 +38,8 @@ h2 {
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-  border: none;
-  display:inline-block;
+/*  border: none;
+*/  display:inline-block;
   cursor:pointer;
   color: white;
   font-family: Inconsolata;
@@ -47,13 +47,15 @@ h2 {
   text-decoration:none;
   text-shadow:0px 1px 0px #e85815;
   outline: none;
-  margin-left: 29px;
-  margin-right: 5px;
+/*  margin-left: 29px;
+  margin-right: 5px;*/
   padding: 10px;
 }
+
 #timer:hover {
   background-color:#e66119;
 }
+
 #timer:active {
   position:relative;
   top:1px;
@@ -67,8 +69,7 @@ h2 {
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-  border:1px solid #ffffff;
-  border: none;
+/*  border: none;*/
   display:inline-block;
   cursor:pointer;
   color: white;
@@ -77,21 +78,22 @@ h2 {
   text-decoration:none;
   text-shadow:0px 1px 0px #e85815;
   outline: none;
-  margin-left: 5px;
-  margin-right: 5px;
+/*  margin-left: 5px;
+  margin-right: 5px;*/
   padding: 10px;
 }
 
 #reset:hover {
   background-color:#e66119;
 }
+
 #reset:active {
   position:relative;
   top:1px;
 }
 
 #timerDisplay{
-  margin-right: 690px;
+  /*margin-right: 460px;*/
 }
 
 .centerItems {
@@ -101,14 +103,14 @@ h2 {
 
 #ruleTable {
   border: 2px solid white;
-  padding: 10px;
   margin-bottom: 20px;
+  padding: 10px;
+
 }
 
 #ruleTable2 {
-  padding: 10px;
-  margin-top: 2px;
-  margin-bottom: 5px;
+  border: none;
+  margin-bottom: 20px;
 }
 
 .row1 {
@@ -153,18 +155,24 @@ h2 {
   font-size: 16px;*/
 /*}*/
 
+#sofeet {
+  font-size: 24px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 #circle1 {
   background-color: #E8366C;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
 }
 
 #circle2 {
   background-color: #9B3AFF;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
 }
 
 .stats {
@@ -208,7 +216,7 @@ h2 {
 #table1{
   background-color: #173599;
   width: 640px;
-  height: 640px;
+  height: 460px;
   margin: auto;
   float: left;
   padding: 0px 10px 0px 40px;
@@ -228,10 +236,10 @@ h2 {
 #table2{
   background-color: #173599;
   width: 640px;
-  height: 640px;
+  height: 460px;
   margin: auto;
   float: left;
-  padding: 0px 40px 0px 36px;
+  padding: 0px 10px 0px 36px;
 }
 
 .card2 {
@@ -254,3 +262,4 @@ h2 {
 .player2 {
   background-color: #9B3AFF;
 }
+
