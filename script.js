@@ -177,7 +177,45 @@ $(function() {
       $('.modal').easyModal();
     });
 
-///Timer and Winner function
+//Shuffle Board
+function shuffle(sourceArray) {
+    for (var i = 0; i < sourceArray.length - 1; i++) {
+        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+        var temp = sourceArray[j];
+        sourceArray[j] = sourceArray[i];
+        sourceArray[i] = temp;
+    }
+}
+console.log(words)
+
+//Run and Display Timer
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+            clearInterval(interval);
+            endOfGame();
+        }
+    }, 1000);
+}
+
+function timer() {
+    var twoMinutes = 5 * 1,
+    display = document.querySelector('#timer');
+    startTimer(twoMinutes, display);
+};
+
+
+///Winner function based on Timer
 function endOfGame() {
   var modal = $('.modal');
   var message = $('.message');
@@ -190,49 +228,6 @@ function endOfGame() {
   }
   $('.modal').trigger('openModal');
 }
-
-//Shuffle Board
-function shuffle(sourceArray) {
-    for (var i = 0; i < sourceArray.length - 1; i++) {
-        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
-        var temp = sourceArray[j];
-        sourceArray[j] = sourceArray[i];
-        sourceArray[i] = temp;
-    }
-}
-console.log(words)
-
-// function getTimeRemaining(endtime){
-//   var t = Date.parse(endtime) - Date.parse(new Date());
-//   var seconds = Math.floor( (t/1000) % 60 );
-//   var minutes = Math.floor( (t/1000/60) % 60 );
-//   return {
-//     'total': t,
-//     'minutes': minutes,
-//     'seconds': seconds
-//   };
-// }
-
-// function initializeClock(id, endtime){
-//   var clock = document.getElementById(id);
-//   var minutesSpan = clock.querySelector('.minutes');
-//   var secondsSpan = clock.querySelector('.seconds');
-
-// function updateClock(){
-//   var t = getTimeRemaining(endtime);
-//   minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-//   secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-//   if(t.total<=0){
-//     clearInterval(timeinterval);
-//   }
-// }
-// updateClock();
-// var timeinterval = setInterval(updateClock,1000);
-// }
-
-// var deadline = 'December 31 2015 00:00:50 UTC+0200';
-// initializeClock('clockdiv', deadline);
-
 //Resets the Board.
 // function resetBoard(){
 //   return shuffle(words);

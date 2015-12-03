@@ -20,16 +20,6 @@ h2 {
   padding-bottom: 30px;
 }
 
-/*#rules {
-  background-color: #B2CCF2;
-  width: 1340px;
-  height: 60px;
-  margin: auto;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 24px;
-}*/
-
 .setting {
   -moz-box-shadow:inset 0px 39px 0px -24px #FF9C0D;
   -webkit-box-shadow:inset 0px 39px 0px -24px #FF9C0D;
@@ -38,8 +28,7 @@ h2 {
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-/*  border: none;
-*/  display:inline-block;
+  display:inline-block;
   cursor:pointer;
   color: white;
   font-family: Inconsolata;
@@ -47,8 +36,8 @@ h2 {
   text-decoration:none;
   text-shadow:0px 1px 0px #FF9C0D;
   outline: none;
-/*  margin-left: 29px;
-  margin-right: 5px;*/
+  margin-left: 29px;
+  margin-right: 5px;
   padding: 10px;
 }
 
@@ -98,34 +87,6 @@ h2 {
   padding: 10px;
 }
 
-/*#clockdiv{
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-}
-
-#clockdiv > div{
-  padding: 10px;
-  border-radius: 3px;
-  background: #00BF96;
-  display: inline-block;
-}
-
-#clockdiv div > span{
-  padding: 15px;
-  border-radius: 3px;
-  background: #00816A;
-  display: inline-block;
-}
-
-.smalltext{
-  padding-top: 5px;
-  font-size: 16px;*/
-/*}*/
-
 #sofeet {
   font-size: 24px;
   padding-left: 100px;
@@ -151,40 +112,7 @@ h2 {
   padding-right: 50px;
 }
 
-
-/*#selectPlayer {
-  font-size: 24px;
-  line-height: 48px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-#player li {
-  font-size: 24px;
-  list-style: none;
-  line-height: 48px;
-}
-
-.kid {
-  background: none;
-  border: none;
-  padding: 10px;
-  margin: 12px;
-  width: 100px;
-}
-
-
-.stats {
-  background-color: #B2CCF2;
-  width: 120px;
-  font-size: 24px;
-  height: 72px;
-  border: none;
-  color: #17359;
-  text-align: center;
-}*/
-
-#table1{
+#table1 {
   background-color: #173599;
   width: 640px;
   height: 460px;
@@ -204,7 +132,7 @@ h2 {
   border-radius: 8px;
 }
 
-#table2{
+#table2 {
   background-color: #173599;
   width: 640px;
   height: 460px;
