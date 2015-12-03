@@ -1,223 +1,85 @@
+//Constructor functions to create arrays of words and images(Hebrew characters).
+function Word(word, selected) {
+  this.word = word;
+  this.selected = false;
+}
+
+function Images(word, path, selected) {
+  this.word = word;
+  this.path = path;
+  this.selected = false;
+}
+
 var words = [
-{ word: "shin",
-  selected: false
-},
-{ word: "bet",
-  selected: false
-},
-{ word: "tav",
-  selected: false
-},
-{ word: "aleph",
-  selected: false
-},
-{ word: "resh",
-  selected: false
-},
-{ word: "lamed",
-  selected: false
-},
-{ word: "sin",
-  selected: false
-},
-{ word: "gimel",
-  selected: false
-},
-{ word: "ayin",
-  selected: false,
-},
-{ word: "chaph",
-  selected: false,
-},
-{ word: "chaph**",
-  selected: false,
-},
-{ word: "chet",
-  selected: false,
-},
-{ word: "mem",
-  selected: false,
-},
-{ word: "kaph",
-  selected: false,
-},
-{ word: "tsade",
-  selected: false,
-},
-{ word: "vet",
-  selected: false,
-},
-{ word: "daled",
-  selected: false,
-},
-{ word: "fay",
-  selected: false,
-},
-{ word: "fay**",
-  selected: false,
-},
-{ word: "mem**",
-  selected: false,
-},
-{ word: "nun",
-  selected: false,
-},
-{ word: "samech",
-  selected: false,
-},
-{ word: "tsade**",
-  selected: false,
-},
-{ word: "vav",
-  selected: false,
-},
-{ word: "yud",
-  selected: false,
-},
-{ word: "zayin",
-  selected: false,
-},
-{ word: "hey",
-  selected: false,
-},
-{ word: "nun**",
-  selected: false,
-},
-{ word: "kuf",
-  selected: false,
-},
-{ word: "sav",
-  selected: false,
-},
-{ word: "tet",
-  selected: false,
-}];
+  new Word('shin'),
+  new Word('bet'),
+  new Word('tav'),
+  new Word('aleph'),
+  new Word('resh'),
+  new Word('lamed'),
+  new Word('sin'),
+  new Word('gimel'),
+  new Word('ayin'),
+  new Word('chaph'),
+  new Word('chaph**'),
+  new Word('chet'),
+  new Word('mem'),
+  new Word('kaph'),
+  new Word('tsade'),
+  new Word('vet'),
+  new Word('daled'),
+  new Word('fay'),
+  new Word('fay**'),
+  new Word('mem**'),
+  new Word('nun'),
+  new Word('samech'),
+  new Word('tsade**'),
+  new Word('vav'),
+  new Word('yud'),
+  new Word('zayin'),
+  new Word('hey'),
+  new Word('nun**'),
+  new Word('kuf'),
+  new Word('sav'),
+  new Word('tet'),
+  new Word('pay')
+]
 
 var images = [
-{ word: "shin",
-  selected: false,
-  path: "images/shin.png"
-},
-{ word: "bet",
-  selected: false,
-  path: "images/bet.png"
-},
-{ word: "tav",
-  selected: false,
-  path: "images/tav.png"
-},
-{ word: "aleph",
-  selected: false,
-  path: "images/aleph.png"
-},
-{ word: "resh",
-  selected: false,
-  path: "images/resh.png"
-},
-{ word: "lamed",
-  selected: false,
-  path: "images/lamed.png"
-},
-{ word: "sin",
-  selected: false,
-  path: "images/sin.png"
-},
-{ word: "gimel",
-  selected: false,
-  path: "images/gimel.png"
-},
-{ word: "ayin",
-  selected: false,
-  path: "images/ayin.png"
-},
-{ word: "chaph",
-  selected: false,
-  path: "images/chaph.png"
-},
-{ word: "chaph**",
-  selected: false,
-  path: "images/chaph**.png"
-},
-{ word: "chet",
-  selected: false,
-  path: "images/chet.png"
-},
-{ word: "mem",
-  selected: false,
-  path: "images/mem.png"
-},
-{ word: "kaph",
-  selected: false,
-  path: "images/kaph.png"
-},
-{ word: "tsade",
-  selected: false,
-  path: "images/tsade.png"
-},
-{ word: "vet",
-  selected: false,
-  path: "images/vet.png"
-},
-{ word: "daled",
-  selected: false,
-  path: "images/daled.png"
-},
-{ word: "fay",
-  selected: false,
-  path: "images/fay.png"
-},
-{ word: "fay**",
-  selected: false,
-  path: "images/fay**.png"
-},
-{ word: "mem**",
-  selected: false,
-  path: "images/mem**.png"
-},
-{ word: "nun",
-  selected: false,
-  path: "images/nun.png"
-},
-{ word: "samech",
-  selected: false,
-  path: "images/samech.png"
-},
-{ word: "tsade**",
-  selected: false,
-  path: "images/tsade**.png"
-},
-{ word: "vav",
-  selected: false,
-  path: "images/vav.png"
-},
-{ word: "yud",
-  selected: false,
-  path: "images/yud.png"
-},
-{ word: "zayin",
-  selected: false,
-  path: "images/zayin.png"
-},
-{ word: "hey",
-  selected: false,
-  path: "images/hey.png"
-},
-{ word: "nun**",
-  selected: false,
-  path: "images/nun**.png"
-},
-{ word: "kuf",
-  selected: false,
-  path: "images/kuf.png"
-},
-{ word: "sav",
-  selected: false,
-  path: "images/sav.png"
-},
-{ word: "tet",
-  selected: false,
-  path: "images/tet.png"
-}];
+  new Images('shin','images/shin.png'),
+  new Images('bet','images/bet.png'),
+  new Images('tav','images/tav.png'),
+  new Images('aleph','images/aleph.png'),
+  new Images('resh','images/resh.png'),
+  new Images('lamed','images/lamed.png'),
+  new Images('sin','images/sin.png'),
+  new Images('gimel','images/gimel.png'),
+  new Images('ayin','images/ayin.png'),
+  new Images('chaph','images/chaph.png'),
+  new Images('chaph**','images/chaph**.png'),
+  new Images('chet','images/chet.png'),
+  new Images('mem','images/mem.png'),
+  new Images('kaph','images/kaph.png'),
+  new Images('tsade','images/tsade.png'),
+  new Images('vet','images/vet.png'),
+  new Images('daled','images/daled.png'),
+  new Images('fay','images/fay.png'),
+  new Images('fay**','images/fay**.png'),
+  new Images('mem**','images/mem**.png'),
+  new Images('nun','images/nun.png'),
+  new Images('samech','images/samech.png'),
+  new Images('tsade**','images/tsade**.png'),
+  new Images('vav','images/vav.png'),
+  new Images('yud','images/yud.png'),
+  new Images('zayin','images/zayin.png'),
+  new Images('hey','images/hey.png'),
+  new Images('nun**','images/nun**.png'),
+  new Images('kuf','images/kuf.png'),
+  new Images('sav','images/sav.png'),
+  new Images('tet','images/tet.png'),
+  new Images('pay','images/pay.png')
+]
+
 var player1Points = 0; //blue player
 var player2Points = 0; //green player
 var player = 0;
@@ -311,16 +173,23 @@ function setSelected(item){
 }
 console.log(words, images);
 
+$(function() {
+      $('#modal').easyModal();
+    });
+
 ///Timer and Winner function --- need to remove ALERTS and change to dialogs
 function endOfGame() {
-  alert("Game is Over!!");
+  var modal = $('#modal');
+  var message = $('#message');
     if (player1Points > player2Points) {
-    alert("Mazel Tov Player 1! You won!")
+  message.html("Mazel Tov Player 1! You won!");
+    $("<div title='Basic dialog'>Mazel Tov Player 1! You won!</div>").dialog();
   } else if (player2Points > player1Points) {
-    alert("Mazel Tov Player 2! You won!")
+  message.html("Mazel Tov Player 2! You won!");
   } else if (player2Points == player1Points) {
-    alert("It's a tie! Play Again.")
+  message.html("It's a tie! Play Again.");
   }
+  $('#modal').trigger('openModal');
 }
 
 //Shuffle Board
