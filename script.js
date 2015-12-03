@@ -91,9 +91,6 @@ var words = [
 },
 { word: "tet",
   selected: false,
-},
-{ word: "vav",
-  selected: false,
 }];
 
 var images = [
@@ -220,10 +217,6 @@ var images = [
 { word: "tet",
   selected: false,
   path: "images/tet.png"
-},
-{ word: "vav",
-  selected: false,
-  path: "images/vav.png"
 }];
 var player1Points = 0; //blue player
 var player2Points = 0; //green player
@@ -242,7 +235,7 @@ function displayAllWords() {
 //Displays all Hebrew images on the browser.
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
-    document.getElementById("table1").innerHTML += "<button id='" + images[i].path + "' class='card2'>" + '<img src='+ images[i].path +' width="80px">'+ "</button>"
+    document.getElementById("table1").innerHTML += "<button id='" + images[i].path + "' class='card2'>" + '<img src='+ images[i].path +' width="60px">'+ "</button>"
   }
   $('.card2').click(function(event) {
     setSelected(event.currentTarget);

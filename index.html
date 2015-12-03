@@ -4,15 +4,28 @@
   <meta charset="UTF-8">
   <title>Learn the Aleph Bet!</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <button type="button" id="reset" onlick="resetBoard()" >Reset</button>
   <h1>Learn the Aleph Bet!</h1>
-  <div>
-    <span id="scoreBoard">Score</span>
-    <div id="circle1"><span id="playerOne">Player 1: 0</span></div>
-    <div id="circle2"><span id="playerTwo">Player 2: 0</span></div>
-    <button id = "timer" onclick="setTimeout(endOfGame, 300);">Start the Timer!</button>
+  <h2>Match the characters with their names before time runs out!</h2>
+  <table class="centerItems" id="ruleTable">
+    <tr class="row1">
+      <td>Click</td>
+      <td>Match</td>
+      <td>Score</td>
+      <td>Win!</td>
+    </tr>
+    <tr class="row2">
+      <td class = "rules">Click on a Hebrew character.</td>
+      <td class = "rules">Match the character in the left box with its name in the right box.</td>
+      <td class = "rules">Score 10 points when you make a match.<br>If you miss a match, your opponent can steal that those points.</td>
+      <td class = "rules">Earn enough points to beat your opponent!</td>
+    </tr>
+  </table>
+  <div class="centerItems">
+    <button id = "timer" onclick="setTimeout(endOfGame, 120000);">Start</button>
+    <button id="reset" onlick="resetBoard()" >Reset</button>
   </div>
 <!--   <div id="clockdiv">
     <div>
@@ -23,16 +36,20 @@
       <span class="seconds"></span>
       <div class="smalltext">Seconds</div>
     </div>
-  </div> -->
+  </div>
+    <table>
+    <tr>
+      <td id="scoreBoard">Score</td>
+      <td >Score</td>
+    </tr>
+    <tr>
+      <td id="playerOne">Player 1: 0</td>
+    </tr>
+    <tr>
+      <td id="playerTwo">Player 2: 0</td>
+  </tr>
+  </table>-->
   <div id="rules">
-<!--     <h2 id = "click">CLICK</h2>
-    <p>Click on a Hebrew character</p>
-    <h2 id = "match">MATCH</h2>
-    <p>Match the character with its name.</p>
-    <h2 id = "score">SCORE</h2>
-    <p>Score 10 points when you make a match. If you miss a match, your opponent can steal that those points.</p>
-    <h2 id = "score">WIN</h2>
-    <p>Earn enough points to beat your opponent!</p> -->
   </div>
   <div id="table1">
   </div>
