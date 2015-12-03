@@ -10,7 +10,7 @@ h1 {
   margin: auto;
   font-size: 52px;
   text-align: center;
-  padding: 14px;
+  padding: 14px 14px 28px 14px;
 }
 
 h2 {
@@ -38,16 +38,18 @@ h2 {
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-  border:1px solid #ffffff;
+  border: none;
   display:inline-block;
   cursor:pointer;
-  color:#ffffff;
-  font-size:20px;
-  padding:20px;
+  color: white;
+  font-family: Inconsolata;
+  font-size:24px;
   text-decoration:none;
   text-shadow:0px 1px 0px #e85815;
   outline: none;
-  margin-right: 40px;
+  margin-left: 29px;
+  margin-right: 5px;
+  padding: 10px;
 }
 #timer:hover {
   background-color:#e66119;
@@ -66,15 +68,18 @@ h2 {
   -webkit-border-radius:4px;
   border-radius:4px;
   border:1px solid #ffffff;
+  border: none;
   display:inline-block;
   cursor:pointer;
-  color:#ffffff;
-  font-size:20px;
-  padding:20px;
+  color: white;
+  font-family: Inconsolata;
+  font-size:24px;
   text-decoration:none;
   text-shadow:0px 1px 0px #e85815;
   outline: none;
-  margin-left: 34px;
+  margin-left: 5px;
+  margin-right: 760px;
+  padding: 10px;
 }
 
 #reset:hover {
@@ -93,6 +98,13 @@ h2 {
 #ruleTable {
   border: 2px solid white;
   padding: 10px;
+  margin-bottom: 20px;
+}
+
+#ruleTable2 {
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 5px;
 }
 
 .row1 {
@@ -137,31 +149,25 @@ h2 {
   font-size: 16px;*/
 /*}*/
 
-#scoreBoard {
-
-}
-
 #circle1 {
   background-color: #E8366C;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 #circle2 {
   background-color: #9B3AFF;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
-#playerOne {
-
+.stats {
+  font-size: 24px;
+  padding-right: 30px;
 }
 
-#playerTwo {
-
-}
 
 /*#selectPlayer {
   font-size: 24px;
@@ -212,6 +218,7 @@ h2 {
   border: 2px solid #173599;
   color: white;
   font-size: 20px;
+  border-radius: 8px;
 }
 
 #table2{
@@ -229,6 +236,7 @@ h2 {
   height: 90px;
   float: left;
   border: 2px solid #173599;
+  border-radius: 8px;
 }
 
 .selected1 {
