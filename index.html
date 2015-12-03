@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <title>Learn the Aleph Bet!</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css">
   <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -28,7 +26,7 @@
   </table>
   <table class="centerItems" id="ruleTable2">
     <tr>
-      <td><button class= "setting" id = "timer" onclick = "setTimeout(endOfGame, 100);">Start</button></td>
+      <td><button class= "setting" id = "timer" onclick = "setTimeout(endOfGame, 500);">Start</button></td>
       <td><button class= "setting" id = "reset" onlick = "resetBoard()">Reset</button></td>
       <td><button id = "timerDisplay">2:00</button></td>
       <td id = "sofeet">** = sofeet</td>
@@ -38,9 +36,10 @@
       <td class = "stats" id = "playerTwo">Player 2: 0</td>
     </tr>
   </table>
-  <div class="modal">
-    <p class="message"></p>
+  <div class = "modal">
+    <p class = "message"></p>
   </div>
+
 <!--   <div id="clockdiv">
     <div>
       <span class="minutes"></span>

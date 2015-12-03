@@ -242,12 +242,12 @@ left: 50%;
 top: 200px;
 margin-left: -300px;
 margin-top: 0px;
-background-color: #FF9C0D;
 padding: 50px;
 border-radius: 8px;
+background-color: #FF4D00;
 }
 
 .message {
 font-family: Inconsolata;
-font-size: 24px;
+font-size: 36px;
 }
