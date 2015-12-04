@@ -51,6 +51,11 @@ h2 {
   top:1px;
 }
 
+.timer {
+  background-color:#FF4D00;
+  box-shadow:inset 0px 39px 0px -24px #FF4D00;
+}
+
 
 #timerDisplay{
   /*margin-right: 460px;*/

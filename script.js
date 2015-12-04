@@ -220,6 +220,7 @@ function timer() {
     var twoMinutes = 60 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
+    $('#timer').addClass('timer');
     $('.card, .card2').attr('disabled', false)
 };
 
