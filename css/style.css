@@ -64,7 +64,7 @@ h2 {
 #ruleTable {
   border: 2px solid white;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 20px 10px 10px;
 
 }
 
@@ -118,7 +118,7 @@ h2 {
   height: 460px;
   margin: auto;
   float: left;
-  padding: 0px 10px 0px 40px;
+  padding: 0px 10px 40px 40px;
 }
 
 .card {
@@ -138,7 +138,7 @@ h2 {
   height: 460px;
   margin: auto;
   float: left;
-  padding: 0px 10px 0px 36px;
+  padding: 0px 10px 40px 36px;
 }
 
 .card2 {

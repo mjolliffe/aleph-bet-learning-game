@@ -91,7 +91,7 @@ function Images(word, path, selected) {
 
 //Displays the Play Button
 function displayPlay() {
-  document.getElementById("timer").innerHTML = "Play"
+  document.getElementById("timer").innerHTML = "Play";
 }
 displayPlay();
 
@@ -124,18 +124,6 @@ shuffle(words);
 shuffle(images);
 displayAllWords();
 displayAllImages();
-
-
-//Resets the Board.
-function resetBoard(){
-  $('.card, .card2').remove();
-  shuffle(words);
-  shuffle(images);
-  displayAllWords();
-  displayAllImages();
-  timer();
-  clearInterval(interval);
-}
 
 //Selects letters and word shapes and sets selected items to true.
 function setSelected(item){
@@ -234,6 +222,16 @@ function timer() {
     startTimer(twoMinutes, display);
     $('.card, .card2').attr('disabled', false)
 };
+
+//Resets the Board.
+function resetBoard(){
+  $('.card, .card2').remove();
+  shuffle(words);
+  shuffle(images);
+  displayAllWords();
+  displayAllImages();
+  timer();
+}
 
 //Execute modal function
 $(function() {
