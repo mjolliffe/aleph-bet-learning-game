@@ -101,7 +101,7 @@ function displayReset() {
 }
 displayReset();
 
-//Displays all words on the browser.
+//Displays all words in the browser.
 function displayAllWords() {
   for (var i=0;i<words.length;i++) {
     document.getElementById("table2").innerHTML += "<button id='" + words[i].word + "' class='card'>" + words[i].word + "</button>"
@@ -111,7 +111,7 @@ function displayAllWords() {
   });
 }
 
-//Displays all Hebrew images on the browser.
+//Displays all Hebrew characters in the browser.
 function displayAllImages() {
   for (var i=0;i<images.length;i++) {
     document.getElementById("table1").innerHTML += "<button id='" + images[i].path + "' class='card2'>" + '<img src='+ images[i].path +' width="60px">'+ "</button>"
@@ -133,7 +133,8 @@ function resetBoard(){
   shuffle(images);
   displayAllWords();
   displayAllImages();
-  displayPlay();
+  timer();
+  clearInterval(interval);
 }
 
 //Selects letters and word shapes and sets selected items to true.
@@ -254,5 +255,5 @@ function endOfGame() {
     $('.modal').addClass('tie');
   }
   $('.modal').trigger('openModal');
-  displayStart();
+  displayPlay();
 }
