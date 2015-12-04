@@ -1,3 +1,7 @@
+window.onload = function (){
+  $('.card, .card2').attr('disabled', 'disabled');
+}
+
 var words = [
   new Word('shin'),
   new Word('bet'),
@@ -85,17 +89,17 @@ function Images(word, path, selected) {
   this.selected = false;
 }
 
-//Disables Boards
-function disableBoards() {
-    document.getElementsByClassName('.card').disabled = true;
-    document.getElementsByClassName('.card2').disabled = true;
+//Displays the Play Button
+function displayPlay() {
+  document.getElementById("timer").innerHTML = "Play"
 }
+displayPlay();
 
-//Enables Boards when Start button clicked
-function enableBoards() {
-    document.getElementsByClassName('.card').disabled = false;
-    document.getElementsByClassName('.card2').disabled = false;
+//Displays the Reset Button
+function displayReset() {
+  document.getElementById("reset").innerHTML = "Reset"
 }
+displayReset();
 
 //Displays all words on the browser.
 function displayAllWords() {
@@ -121,17 +125,6 @@ shuffle(images);
 displayAllWords();
 displayAllImages();
 
-//Displays the Start Button
-function displayStart() {
-  document.getElementById("timer").innerHTML = "Play"
-}
-displayStart();
-
-//Displays the Reset Button
-function displayReset() {
-  document.getElementById("reset").innerHTML = "Reset"
-}
-displayReset();
 
 //Resets the Board.
 function resetBoard(){
@@ -140,7 +133,7 @@ function resetBoard(){
   shuffle(images);
   displayAllWords();
   displayAllImages();
-  displayStart();
+  displayPlay();
 }
 
 //Selects letters and word shapes and sets selected items to true.
@@ -238,6 +231,7 @@ function timer() {
     var twoMinutes = 60 * 2,
     display = document.querySelector('#timer');
     startTimer(twoMinutes, display);
+    $('.card, .card2').attr('disabled', false)
 };
 
 //Execute modal function
