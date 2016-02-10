@@ -1,0 +1,201 @@
+$blue: #173599;
+$darkorange: #FF4D00;
+$orange: #FF9C0D;
+$pink: #E8366C;
+$purple: #9B3AFF;
+$titlefont: 'Roboto', sans-serif;
+$secondaryfont: Inconsolata;
+
+html {
+  background-color: $blue;
+  color: white;
+  font-family: $titlefont;
+  letter-spacing: .025em;
+}
+
+h1 {
+  margin: auto;
+  font-size: 60px;
+  text-align: center;
+  padding: 14px 14px 28px 14px;
+}
+
+h2 {
+  margin: auto;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.setting {
+  -moz-box-shadow:inset 0px 39px 0px -24px $orange;
+  -webkit-box-shadow:inset 0px 39px 0px -24px $orange;
+  box-shadow:inset 0px 39px 0px -24px $orange;
+  background-color: $orange;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  display:inline-block;
+  cursor:pointer;
+  color: white;
+  font-family: $secondaryfont;
+  font-size:24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px $orange;
+  outline: none;
+  margin-left: 29px;
+  margin-right: 5px;
+  padding: 10px 30px;
+}
+
+.setting:hover {
+  background-color: $darkorange;
+  box-shadow:inset 0px 39px 0px -24px $darkorange;
+}
+
+.setting:active {
+  position:relative;
+  top:1px;
+}
+
+.timer {
+  background-color: $darkorange;
+  box-shadow:inset 0px 39px 0px -24px $darkorange;
+}
+
+.centerItems {
+  text-align: center;
+  margin: 12px;
+}
+
+#ruleTable {
+  border: 2px solid white;
+  margin-bottom: 20px;
+  padding: 20px 10px 10px;
+
+}
+
+#ruleTable2 {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.row1 {
+  font-size: 28px;
+}
+
+.row2 {
+  font-size: 16px;
+  font-family: $secondaryfont;
+}
+
+.rules {
+  width: 320px;
+  padding: 10px;
+}
+
+#sofeet {
+  font-size: 24px;
+  padding-left: 400px;
+  padding-right: 40px;
+}
+
+#circle1 {
+  background-color: $pink;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+#circle2 {
+  background-color: $purple;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}
+
+.stats {
+  font-size: 24px;
+  padding-right: 50px;
+}
+
+#table1 {
+  background-color: $blue;
+  width: 640px;
+  height: 460px;
+  margin: auto;
+  float: left;
+  padding: 0px 10px 40px 40px;
+}
+
+.card {
+  background-color: #118F85;
+  width: 90px;
+  height: 90px;
+  float: left;
+  border: 2px solid $blue;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+#table2 {
+  background-color: $blue;
+  width: 640px;
+  height: 460px;
+  margin: auto;
+  float: left;
+  padding: 0px 10px 40px 36px;
+}
+
+.card2 {
+  background-color: #118F85;
+  width: 90px;
+  height: 90px;
+  float: left;
+  border: 2px solid $blue;
+  border-radius: 8px;
+}
+
+.selected1 {
+  background-color: $orange;
+}
+
+.player1 {
+  background-color: $pink;
+}
+
+.player2 {
+  background-color: $purple;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 200px;
+  margin-left: -300px;
+  margin-top: 0px;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.modal.player1 {
+  background-color: $pink;
+}
+
+.modal.player2 {
+  background-color: $purple;
+}
+
+.modal.tie {
+  background-color: $darkorange;
+}
+
+.message {
+  font-family: $secondaryfont;
+  font-size: 36px;
+  text-align: center;
+  line-height: 72px;
+}
