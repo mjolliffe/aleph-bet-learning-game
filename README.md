@@ -29,7 +29,6 @@ Additional add ons were modals as well as GoogleFonts and FontAwesome Icons.
 
 1. Game always starts with Player 1. 
 2. If click a character tile and incorrectly match it with a word tile, then the next player has to chose that tile - this is not the issue, the issue is that the whole board should disable except for that character tile and the word tiles when this happens.
-3. Timer has a problem resetting upon clicking reset.
 
 ##### Ultimate Vision for the Game
 
