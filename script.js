@@ -221,7 +221,7 @@ function startTimer(duration, display) {
 
 //Sets timer to two minutes
 function timer() {
-  var twoMinutes = 5 * 2,
+  var twoMinutes = 60 * 2,
   display = document.querySelector('#timer');
   startTimer(twoMinutes, display);
   $('#timer').addClass('timer');
