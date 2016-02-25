@@ -92,6 +92,7 @@ function Images(word, path, selected) {
 //Displays the Play Button
 function displayPlay() {
   document.getElementById("timer").innerHTML = "Play";
+  $('.card, .card2').attr('disabled', true)
 }
 displayPlay();
 
@@ -190,53 +191,69 @@ function setSelected(item){
 
 //Shuffle Board
 function shuffle(sourceArray) {
-    for (var i = 0; i < sourceArray.length - 1; i++) {
-        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
-        var temp = sourceArray[j];
-        sourceArray[j] = sourceArray[i];
-        sourceArray[i] = temp;
-    }
+  for (var i = 0; i < sourceArray.length - 1; i++) {
+      var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+      var temp = sourceArray[j];
+      sourceArray[j] = sourceArray[i];
+      sourceArray[i] = temp;
+  }
 }
+
+var interval;
 
 //Runs and Displays Timer, Also calls endOfGame function
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    var interval = setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        display.textContent = minutes + ":" + seconds;
-        if (--timer < 0) {
-            timer = duration;
-            clearInterval(interval);
-            endOfGame();
-        }
-    }, 1000);
+  resetBoard();
+  var timer = duration, minutes, seconds;
+  interval = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = minutes + ":" + seconds;
+    if (--timer < 0) {
+      timer = duration;
+      clearInterval(interval);
+      endOfGame();
+    }
+  }, 1000);
 }
 
 //Sets timer to two minutes
 function timer() {
-    var twoMinutes = 60 * 2,
-    display = document.querySelector('#timer');
-    startTimer(twoMinutes, display);
-    $('#timer').addClass('timer');
-    $('.card, .card2').attr('disabled', false)
+  var twoMinutes = 5 * 2,
+  display = document.querySelector('#timer');
+  startTimer(twoMinutes, display);
+  $('#timer').addClass('timer');
+  $('.card, .card2').attr('disabled', false)
 };
 
+// Reset scores
+function resetPoints() {
+  player1Points = 0;
+  player2Points = 0;
+  document.getElementById('playerOne').innerHTML = "Player 1: " + player1Points + " ";
+  document.getElementById('playerTwo').innerHTML = "Player 2: " + player2Points + " ";
+}
+
 //Resets the Board.
-function resetBoard(){
+function resetBoard(flag){
+  clearInterval(interval);
   $('.card, .card2').remove();
-  shuffle(words);
-  shuffle(images);
+  $('.card, .card2').attr('disabled', true)
+  if (flag) {
+    shuffle(words);
+    shuffle(images);
+  }
   displayAllWords();
   displayAllImages();
-  timer();
+  displayPlay();
+  resetPoints();
 }
 
 //Execute modal function
 $(function() {
-      $('.modal').easyModal();
+  $('.modal').easyModal();
 });
 
 ///Winner function
@@ -245,12 +262,15 @@ function endOfGame() {
   var message = $('.message');
     if (player1Points > player2Points) {
     message.html("Mazel Tov Player 1!<br>You won!");
+    $('.modal').removeClass('player2 tie')
     $('.modal').addClass('player1');
   } else if (player2Points > player1Points) {
     message.html("Mazel Tov Player 2!<br>You won!");
+    $('.modal').removeClass('player1 tie')
     $('.modal').addClass('player2');
   } else if (player2Points == player1Points) {
     message.html("It's a tie!<br>Play Again.");
+    $('.modal').removeClass('player1 player2')
     $('.modal').addClass('tie');
   }
   $('.modal').trigger('openModal');

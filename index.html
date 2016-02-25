@@ -3,47 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <title>Learn the Aleph Bet!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
-  <h1>Learn the Aleph Bet!</h1>
-  <h2>Match the characters with their names before time runs out!</h2>
-  <h2>PRESS PLAY TO START</h2>
-  <table class="centerItems" id="ruleTable">
-    <tr class="row1">
-      <td>Click <i class = "fa fa-mouse-pointer"></i></td>
-      <td>Match <i class = "fa fa-square"></i> <i class = "fa fa-square"></i></td>
-      <td>Score <i class = "fa fa-star"></i></td>
-      <td>Win <i class = "fa fa-trophy"></i></td>
-    </tr>
-    <tr class="row2">
-      <td class = "rules">Click on a Hebrew character.</td>
-      <td class = "rules">Match the character in the left box with its name in the right box.</td>
-      <td class = "rules">Score 10 points when you make a match.<br>If you miss a match, your opponent must make the correct match or lose his turn.</td>
-      <td class = "rules">Earn enough points to beat your opponent and win the game!</td>
-    </tr>
-  </table>
-  <table class="centerItems" id="ruleTable2">
-    <tr>
-      <td><button class= "setting" id = "timer" onclick = "timer()"></button></td>
-      <td><button class= "setting" id = "reset" onclick = "resetBoard()"></button></td>
-      <td id = "sofeet">** = sofeet</td>
-      <td id = "circle1"></td>
-      <td class = "stats" id = "playerOne">Player 1: 0&nbsp;&nbsp;</td>
-      <td id = "circle2"></td>
-      <td class = "stats" id = "playerTwo">Player 2: 0&nbsp;&nbsp;</td>
-    </tr>
-  </table>
-  <div class = "modal">
-    <p class = "message"></p>
-  </div>
-  <div id="rules">
-  </div>
-  <div id="table1">
-  </div>
-  <div id="table2">
+<body id="override">
+  <div class="container">
+    <div class = "modal">
+      <p class = "message"></p>
+    </div>
+    <div class="row spacer">
+      <div class="col-md-12">
+      <h1>Learn the Aleph Bet!</h1>
+      </div>
+      <div class="col-md-12">
+      <h2>Match the characters with their names before time runs out!</h2>
+      </div>
+    </div>
+    <div class="row spacer" id="table">
+      <div class="col-md-3 center">
+      <h3>Click <i class = "fa fa-mouse-pointer"></i><br></h3>
+      <p>Click on a Hebrew character.</p>
+      </div>
+      <div class="col-md-3 center">
+      <h3>Match <i class = "fa fa-square"></i> <i class = "fa fa-square"></i><br></h3>
+      <p>Match the character in the left box with its name in the right box.</p>
+      </div>
+      <div class="col-md-3 center">
+      <h3>Score <i class = "fa fa-star"></i><br></h3>
+      <p>Score 10 points when you make a match. If you miss a match, your opponent must make the correct match or lose his turn.</p>
+      </div>
+      <div class="col-md-3 center">
+      <h3>Win <i class = "fa fa-trophy"></i><br></h3>
+      <p>Earn enough points to beat your opponent and win the game!</p>
+      </div>
+    </div>
+    <div class="row spacer">
+      <div class="col-md-2 center">
+        <button class= "setting" id = "timer" onclick = "timer()"></button>
+        <h2>** = sofeet</h2>
+      </div>
+      <div class="col-md-2 center">
+        <button class= "setting" id = "reset" onclick = "resetBoard(true)"></button>
+      </div>
+      <div class="col-md-2 center">
+      </div>
+      <div class="col-md-3 center">
+        <img src="images/pink_dot.png" alt="">
+        <h2 class = "center" id = "playerOne">Player 1: 0</h2>
+      </div>
+      <div class="col-md-3 center">
+        <img src="images/purple_dot.png" alt="">
+        <h2 class = "center" id = "playerTwo">Player 2: 0</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 table-spacer">
+        <div id="table1">
+        </div>
+      </div>
+      <div class="col-md-6 table-spacer">
+        <div id="table2">
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="jquery.easyModal.js"></script>
