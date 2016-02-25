@@ -32,6 +32,10 @@ p {
   font-size: 16px;
 }
 
+.center {
+  text-align: center;
+}
+
 .spacer {
   margin: 10px 0px
   vertical-align: middle;
@@ -74,10 +78,6 @@ p {
 .timer {
   background-color: #FF4D00;
   box-shadow: inset 0px 39px 0px -24px #FF4D00;
-}
-
-.center {
-  text-align: center;
 }
 
 #table {
@@ -126,15 +126,25 @@ p {
   background-color: #9B3AFF;
 }
 
-.modal {
-  display: inline-block;
-  left: 30%;
-  right: 30%;
-  bottom: 20%;
+/*.modal {
+  left: 43% !important;
+  right: 37% !important;
+  bottom: 30%;
   margin-bottom: 50px;
-  top: 200px;
+  top: 30% !important;
   border-radius: 8px;
-  /*text-align: center;*/
+}*/
+
+.modal {
+  width: 30%;
+  height: 30%;
+  margin:0 auto;
+  display:table;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 40%;
+  border-radius: 8px;
 }
 
 .modal.player1 {
