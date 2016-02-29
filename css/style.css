@@ -83,6 +83,7 @@ a:hover {
 .setting:active {
   position: relative;
   top: 1px;
+  outline: none;
 }
 
 .timer {
@@ -126,6 +127,11 @@ a:hover {
 
 .selected1 {
   background-color: #FF9C0D;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 .player1 {
